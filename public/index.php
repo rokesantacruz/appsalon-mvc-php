@@ -2,10 +2,10 @@
 
 require_once __DIR__ . '/../includes/app.php';
 
-use Controllers\Admincontroller;
+use Controllers\AdminController;
 use Controllers\APIController;
 use Controllers\CitaController;
-use Controllers\loginController;
+use Controllers\LoginController;
 use Controllers\ServicioController;
 use MVC\Router;
 
@@ -27,8 +27,8 @@ $router->get('/crear-cuenta', [LoginController::class, 'crear']);
 $router->post('/crear-cuenta', [LoginController::class, 'crear']);
 
 //confirmar cuenta
-$router->get('/confirmar-cuenta', [loginController::class, 'confirmar']);
-$router->get('/mensaje', [loginController::class, 'mensaje']);
+$router->get('/confirmar-cuenta', [LoginController::class, 'confirmar']);
+$router->get('/mensaje', [LoginController::class, 'mensaje']);
 
 //AREA PRIVADA
 $router->get('/cita', [CitaController::class, 'index']);
