@@ -2,6 +2,13 @@
 @use 'base/variables' as v;
 @use 'base/mixins' as m;
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
 .contenedor-app {
     @include m.tablet {
         display: grid;
@@ -21,13 +28,18 @@
 
     .app {
         width: 95%;
+        max-width: 100%;
         margin: 0 auto;
         padding: 3rem 0;
+        box-sizing: border-box;
+        overflow-x: hidden;
         @include m.tablet {
             overflow: scroll;
         }
         input {
         margin-right: 1rem;
+        max-width: 100%;
+        overflow-x: hidden;
        }
     }
 }
