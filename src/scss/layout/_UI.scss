@@ -31,7 +31,10 @@ html, body {
 
     .app {
         input {
-            margin-right: 1rem;
+             margin: 0;
+             width: 100%;
+             max-width: 100%;
+             box-sizing: border-box;
         }
         width: 95%;
         max-width: 100%;
