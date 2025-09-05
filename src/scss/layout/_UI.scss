@@ -30,7 +30,11 @@ html, body {
     }
 
     .app {
-        overflow: auto;
+        @include m.tablet {
+         .contenedor-app .app {
+          overflow: auto;
+    }
+        }
         input {
              margin: 0;
              width: 100%;
